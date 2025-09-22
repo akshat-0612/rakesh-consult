@@ -47,6 +47,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Professional Insurance Colors
+        professional: {
+          blue: "hsl(var(--professional-blue))",
+          "blue-light": "hsl(var(--professional-blue-light))",
+          "blue-dark": "hsl(var(--professional-blue-dark))",
+        },
+        trust: {
+          gold: "hsl(var(--trust-gold))",
+          "gold-light": "hsl(var(--trust-gold-light))",
+        },
+        neutral: {
+          gray: "hsl(var(--neutral-gray))",
+        },
+        success: {
+          green: "hsl(var(--success-green))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
