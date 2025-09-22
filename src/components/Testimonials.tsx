@@ -105,7 +105,7 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Card className="inline-block p-6 bg-[var(--gradient-hero)] text-primary-foreground">
+          <Card className="inline-block p-6 bg-gradient-to-br from-professional-blue to-professional-blue-light text-primary-foreground">
             <div className="flex items-center justify-center space-x-4 mb-4">
               <div className="flex items-center space-x-1">
                 {[1, 2, 3, 4, 5].map((star) => (

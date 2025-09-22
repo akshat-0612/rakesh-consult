@@ -116,7 +116,7 @@ const About = () => {
           </div>
         </div>
 
-        <Card className="p-8 bg-[var(--gradient-hero)] text-primary-foreground text-center">
+        <Card className="p-8 bg-gradient-to-br from-professional-blue to-professional-blue-light text-primary-foreground text-center">
           <h3 className="text-2xl font-bold mb-4">
             My Commitment to You
           </h3>

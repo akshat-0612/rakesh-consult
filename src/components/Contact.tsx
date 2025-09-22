@@ -100,7 +100,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="p-6 bg-[var(--gradient-hero)] text-primary-foreground">
+            <Card className="p-6 bg-gradient-to-br from-professional-blue to-professional-blue-light text-primary-foreground">
               <CardHeader className="p-0 mb-6">
                 <CardTitle className="text-2xl text-primary-foreground">
                   Let's Start a Conversation
@@ -256,7 +256,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-[var(--gradient-cta)] text-secondary-foreground hover:opacity-90 transition-opacity"
+                  className="w-full bg-gradient-to-r from-trust-gold to-trust-gold-light text-secondary-foreground hover:opacity-90 transition-opacity"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message

@@ -80,7 +80,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-[var(--shadow-hover)] transition-all duration-300 border-0 bg-[var(--gradient-card)]">
+            <Card key={index} className="group hover:shadow-[var(--shadow-hover)] transition-all duration-300 border-0 bg-gradient-to-br from-card to-accent/20">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <service.icon className={`w-8 h-8 ${service.color}`} />
@@ -136,7 +136,7 @@ const Services = () => {
           <Button 
             size="lg" 
             onClick={scrollToContact}
-            className="bg-[var(--gradient-cta)] text-secondary-foreground hover:opacity-90 transition-opacity shadow-lg"
+            className="bg-gradient-to-r from-trust-gold to-trust-gold-light text-secondary-foreground hover:opacity-90 transition-opacity shadow-lg"
           >
             <Phone className="w-5 h-5 mr-2" />
             Schedule Free Consultation

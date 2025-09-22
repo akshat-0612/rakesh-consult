@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen pt-16 bg-[var(--gradient-hero)] relative overflow-hidden">
+    <section id="home" className="min-h-screen pt-16 bg-gradient-to-br from-professional-blue to-professional-blue-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full border border-primary-foreground/20"></div>

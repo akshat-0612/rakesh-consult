@@ -58,7 +58,7 @@ const Header = () => {
             <Button 
               size="sm" 
               onClick={() => scrollToSection('contact')}
-              className="bg-[var(--gradient-hero)] hover:opacity-90 transition-opacity"
+              className="bg-gradient-to-r from-professional-blue to-professional-blue-light text-primary-foreground hover:opacity-90 transition-opacity"
             >
               <Phone className="w-4 h-4 mr-2" />
               Get Quote
