@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -22,36 +25,46 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <Link 
+              to="/"
               className="text-foreground hover:text-primary transition-colors"
             >
               Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('services')}
+            </Link>
+            <Link 
+              to="/plans"
               className="text-foreground hover:text-primary transition-colors"
             >
-              Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Reviews
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </button>
+              Plans
+            </Link>
+            {location.pathname === '/' && (
+              <>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Services
+                </button>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => scrollToSection('testimonials')}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Reviews
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Contact
+                </button>
+              </>
+            )}
           </nav>
 
           <div className="flex items-center space-x-3">
