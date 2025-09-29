@@ -12,8 +12,8 @@ import {
 
 const About = () => {
   const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients" },
-    { icon: Clock, value: "15+", label: "Years Experience" },
+    { icon: Users, value: "1500+", label: "Happy Clients" },
+    { icon: Clock, value: "32+", label: "Years Experience" },
     { icon: Trophy, value: "50+", label: "Awards Won" },
     { icon: Star, value: "4.9", label: "Client Rating" }
   ];
@@ -53,7 +53,7 @@ const About = () => {
             </h3>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              With over 15 years of dedicated service in the insurance industry, I have built my career 
+              With over 32 years of dedicated service in the insurance industry, I have built my career 
               on a foundation of trust, expertise, and unwavering commitment to my clients' financial security.
             </p>
             

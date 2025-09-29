@@ -275,11 +275,11 @@ const Plans = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +91 98765 43210
+                Call Now: +91 99185 02602
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
                 <Mail className="w-5 h-5 mr-2" />
-                Email: rakesh@insurance.com
+                Email: rakeshsri.fzd@gmail.com
               </Button>
             </div>
           </div>

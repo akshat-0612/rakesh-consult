@@ -22,24 +22,53 @@ const Contact = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for your inquiry. Rakesh will contact you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    // const apiBaseUrl = (import.meta as any).env?.VITE_API_URL || 'http://localhost:5000';
+    const apiBaseUrl = 'https://insurance-advisor-backend.vercel.app';
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error((data && (data.message || data.error)) || 'Failed to send message');
+      }
+
+      toast({
+        title: 'Message Sent Successfully!',
+        description: 'Thank you for your inquiry. Rakesh will contact you within 24 hours.'
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Something went wrong';
+      toast({
+        title: 'Failed to send message',
+        description: errorMessage
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -53,25 +82,25 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 98765 43210",
-      action: "tel:+919876543210"
+      details: "+91 99185 02602",
+      action: "tel:+919918502602"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "rakesh.srivastava@insurance.com",
-      action: "mailto:rakesh.srivastava@insurance.com"
+      details: "rakeshsri.fzd@gmail.com",
+      action: "mailto:rakeshsri.fzd@gmail.com"
     },
     {
       icon: MapPin,
       title: "Office",
-      details: "LIC Branch Office, Sector 15, Noida, UP",
+      details: "LIC of India, Amrawati Bhawan, Devkali Road Faizabad, UP",
       action: null
     },
     {
       icon: Clock,
       title: "Working Hours",
-      details: "Mon - Sat: 9:00 AM - 6:00 PM",
+      details: "Mon - Sun: 9:00 AM - 8:00 PM",
       action: null
     }
   ];
@@ -257,9 +286,10 @@ const Contact = () => {
                   type="submit" 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-trust-gold to-trust-gold-light text-secondary-foreground hover:opacity-90 transition-opacity"
+                  disabled={isSubmitting}
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>
