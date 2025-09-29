@@ -94,7 +94,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office",
-      details: "LIC of India, Amrawati Bhawan, Devkali Road Faizabad, UP",
+      details: "LIC of India, Shiva palace, Deokali Bypass, Ayodhya, Uttar Pradesh 224001",
       action: null
     },
     {
