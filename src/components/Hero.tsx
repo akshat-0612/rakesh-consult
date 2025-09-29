@@ -37,7 +37,7 @@ const Hero = () => {
             </p>
             
             <p className="text-lg mb-8 text-primary-foreground/80 leading-relaxed">
-              With over 15 years of experience in LIC and HDFC health insurance advisory, 
+              With over 32 years of experience in LIC and HDFC health insurance advisory, 
               I help families and businesses secure their future with comprehensive insurance solutions.
             </p>
 
