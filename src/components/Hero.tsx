@@ -46,7 +46,7 @@ const Hero = () => {
                 <Star key={star} className="w-5 h-5 fill-secondary text-secondary" />
               ))}
               <span className="text-primary-foreground/80 ml-2">
-                500+ Satisfied Clients
+                1500+ Satisfied Clients
               </span>
             </div>
 
