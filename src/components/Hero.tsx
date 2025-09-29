@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Shield, Star, Phone, Mail } from 'lucide-react';
-import rakeshPortrait from '@/assets/rakesh-portrait.jpg';
+import rakeshPortrait from '@/assets/rakesh_profile.jpeg';
 
 const Hero = () => {
   const scrollToContact = () => {
